@@ -5,7 +5,15 @@ How to Use :
   1. Download the Git Repo
   2. Create a React application using ' create-react-app ' tool
   3. Once Project is created , Replace the Src Folder Files with the Above Files
-  4. use ' npm start ' in cmd 
+  4. use ' npm start ' in cmd
+
+NOTE:
+  1. PROJECT ISN'T FINISHED YET . AS OF NOW , YOU CAN ADD A FRIEND AND CAN SPLIT BILL WITH HIM  . 
+
+
+
+  1. For the Starting usuage , go to the APP.js File and replace the  friends ' Use State ' variable  with the below code
+  2. const [friends,setFriends]=useState([]);
 
 Disclaimer :
   This is a Open source Project , Do check it out once and leave Feedback
