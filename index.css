@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+  overflow: hidden;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#Main_Container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  width: 100vw;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+#friends_Container {
+  min-height: 21rem;
+  min-width: 18rem;
+  max-width: 40vw;
+  display: flex;
+  flex-direction: column;
+}
+.friend {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.friend > li {
+  padding: 2%;
+}
+.friend > li:nth-child(1) > img {
+  border-radius: 50%;
+}
+.friend > li:nth-child(2) {
+  font-weight: bolder;
+  width: 12rem;
+}
+.friend > li:nth-child(2) > span {
+  display: block;
+  opacity: 0.7;
+  font-weight: lighter;
+}
+
+.friend > li:nth-child(3) > button,
+#add_Friend,
+#split_Bill {
+  padding: 0.3rem 0.6rem;
+  background-color: rgb(253, 153, 39);
+  color: black;
+  font-weight: bolder;
+  font-size: 0.7rem;
+  border: transparent;
+  border-radius: 5px;
+}
+
+#add_Friend,
+#split_Bill {
+  margin: 0.5rem;
+  padding: 0.5rem 0.2rem;
+  width: 6rem;
+  align-self: flex-end;
+}
+
+#split_Container {
+  overflow: hidden;
+  max-width: 50vw;
+  background-color: rgb(254, 242, 222);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+#split_Container > h2 {
+  padding: 0.5rem;
+}
+.bill_value {
+  margin: 0.5rem 1rem;
+  list-style: none;
+  /* width: calc(100% - 8px); */
+  display: flex;
+  padding: 0.2rem 0;
+  justify-content: space-between;
+}
+.bill_value > li:nth-child(1) {
+  align-self: center;
+}
+.bill_value > li:nth-child(2) > input,
+.bill_value > li:nth-child(2) > select {
+  border-radius: 4px;
+  width: 6rem;
+  height: 1.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
