@@ -14,6 +14,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow-y: scroll;
 }
 #Main_Container {
   display: flex;
@@ -80,6 +81,27 @@ body {
   background-color: rgb(254, 242, 222);
   padding: 0.5rem 1rem;
   border-radius: 8px;
+}
+@media screen and (max-width: 390px) {
+  body {
+    align-items: unset;
+    margin-top: 2rem;
+  }
+  #Main_Container {
+    display: flex;
+    gap: 10px;
+  }
+  #split_Container {
+    margin: 1rem;
+    min-width: 90vw;
+  }
+  #split_Container > h2 {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  #friends_Container {
+    min-height: 15rem;
+  }
 }
 #split_Container > h2 {
   padding: 0.5rem;
