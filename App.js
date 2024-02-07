@@ -5,13 +5,7 @@ import Friends from "./Friends";
 export default function App() {
   const [show, setShow] = useState(false);
   const [friend, setFriend] = useState();
-  const [friends, setFriends] = useState([
-    { id: 1, img: "", name: "Jeswanth", amount: 120 },
-    { id: 2, img: "", name: "Susan", amount: 100 },
-    { id: 3, img: "", name: "Asif", amount: -1500 },
-    { id: 4, img: "", name: "Penchal", amount: 0 },
-    { id: 5, img: "", name: "Chakri", amount: -2000 },
-  ]);
+  const [friends, setFriends] = useState([]);
 
   function selectHandler(id) {
     setFriend(friends.find((f) => f.id === id));
@@ -31,9 +25,9 @@ export default function App() {
     });
     setFriends(updated);
   }
-  function addFriend({ id, amount, name }) {
-    console.log(id, amount, name);
-    const updatedFriends = [...friends, { id, img: "", name, amount: 0 }];
+  function addFriend({ id, amount, name, img }) {
+    console.log(`App imgae ${img}`);
+    const updatedFriends = [...friends, { id, img, name, amount: 0 }];
     setFriends(updatedFriends);
     console.log(friends);
   }
