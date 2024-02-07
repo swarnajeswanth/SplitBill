@@ -18,8 +18,8 @@ NOTE:
 Disclaimer :
   This is a Open source Project , Do check it out once and leave Feedback
 
-![image](https://github.com/swarnajeswanth/SplitBill/assets/41503134/c70213d7-ed4d-482e-88d1-95c30835ba44)
 
+![image](https://github.com/swarnajeswanth/SplitBill/assets/41503134/7df5072b-2eff-471f-91c6-a0d81499e198)
 
 
 DEVELOPER:
