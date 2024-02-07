@@ -28,45 +28,45 @@ export default function Friends({ selectHandler, friends, addFriend }) {
   console.log();
   return (
     <div id="friends_Container">
-      {friends.length !== 0
-        ? friends.map((friend) => {
-            return (
-              <ul className="friend" key={friend.id}>
-                <li>
-                  <img
-                    className="uploadImg"
-                    src={friend.img || "https://dummyimage.com/50x50.gif"}
-                    alt=""
-                  />
-                </li>
-                <li>
-                  {friend.name}
-                  <span
-                    className="message"
-                    style={
-                      friend.amount === 0
-                        ? { color: "lightgreen" }
-                        : friend.amount < 0
-                        ? { color: "red" }
-                        : { color: "lightblue" }
-                    }
-                  >
-                    {friend.amount === 0
-                      ? `You and ${friend.name} are Even`
+      {friends.length !== 0 ? (
+        friends.map((friend) => {
+          return (
+            <ul className="friend" key={friend.id}>
+              <li>
+                <img
+                  className="uploadImg"
+                  src={friend.img || "https://dummyimage.com/50x50.gif"}
+                  alt=""
+                />
+              </li>
+              <li>
+                {friend.name}
+                <span
+                  className="message"
+                  style={
+                    friend.amount === 0
+                      ? { color: "lightgreen" }
                       : friend.amount < 0
-                      ? `${friend.name} owes you ${Math.abs(friend.amount)}`
-                      : `You owe ${friend.name} ${friend.amount}`}
-                  </span>
-                </li>
-                <li>
-                  <button onClick={() => selectHandler(friend.id)}>
-                    Select
-                  </button>
-                </li>
-              </ul>
-            );
-          })
-        : "No friends to display."}
+                      ? { color: "red" }
+                      : { color: "lightblue" }
+                  }
+                >
+                  {friend.amount === 0
+                    ? `You and ${friend.name} are Even`
+                    : friend.amount < 0
+                    ? `${friend.name} owes you ${Math.abs(friend.amount)}`
+                    : `You owe ${friend.name} ${friend.amount}`}
+                </span>
+              </li>
+              <li>
+                <button onClick={() => selectHandler(friend.id)}>Select</button>
+              </li>
+            </ul>
+          );
+        })
+      ) : (
+        <h3 id="noDisplay">No friends to display.</h3>
+      )}
       <button id="add_Friend" onClick={() => setIsOpen(!isOpen)}>
         Add Friend
       </button>

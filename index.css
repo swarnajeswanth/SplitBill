@@ -126,3 +126,13 @@ body {
   height: 50px;
   display: inline-block;
 }
+
+#noDisplay {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  min-height: 21rem;
+  min-width: 18rem;
+  max-width: 40vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
