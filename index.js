@@ -4,9 +4,9 @@ import App from "./App";
 import "./index.css";
 function StartingPoint() {
   return (
-    <>
+    <React.StrictMode>
       <App />
-    </>
+    </React.StrictMode>
   );
 }
 

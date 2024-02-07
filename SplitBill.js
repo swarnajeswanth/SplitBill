@@ -2,13 +2,14 @@ import React, { useState } from "react";
 export default function SplitBill({ friend, updateAMT }) {
   const [total, setTotal] = useState();
   const [paid, setPaid] = useState("You");
+  console.log(friend);
   function billHandler(e) {
     e.preventDefault();
     updateAMT(Math.round(total / 2), paid, friend.id);
   }
   return (
     <div id="split_Container">
-      <h2>SPLIT A BILL WITH {friend.name.toUpperCase()}</h2>
+      <h2>SPLIT A BILL WITH {String(friend.name).toUpperCase()}</h2>
       <form id="bill_Container" onSubmit={(e) => billHandler(e)}>
         <ul className="bill_value">
           <li>💰 Bill Value</li>

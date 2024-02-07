@@ -14,7 +14,7 @@ export default function App() {
   ]);
 
   function selectHandler(id) {
-    setFriend(friends[id - 1]);
+    setFriend(friends.find((f) => f.id === id));
     setShow(!show);
   }
   function updateAMT(value, paid, id) {
@@ -31,7 +31,12 @@ export default function App() {
     });
     setFriends(updated);
   }
-  function addFriend() {}
+  function addFriend({ id, amount, name }) {
+    console.log(id, amount, name);
+    const updatedFriends = [...friends, { id, img: "", name, amount: 0 }];
+    setFriends(updatedFriends);
+    console.log(friends);
+  }
   return (
     <div id="Main_Container">
       <Friends
