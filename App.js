@@ -26,7 +26,6 @@ export default function App() {
     setFriends(updated);
   }
   function addFriend({ id, amount, name, img }) {
-    console.log(`App imgae ${img}`);
     const updatedFriends = [...friends, { id, img, name, amount: 0 }];
     setFriends(updatedFriends);
     console.log(friends);
@@ -37,6 +36,8 @@ export default function App() {
         selectHandler={selectHandler}
         friends={friends}
         addFriend={addFriend}
+        setShow={setShow}
+        show={show}
       />
       {show && <SplitBill friend={friend} updateAMT={updateAMT} />}
     </div>

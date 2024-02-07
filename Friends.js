@@ -2,7 +2,13 @@ import React from "react";
 import { useState, useRef } from "react";
 import { BsUpload } from "react-icons/bs";
 
-export default function Friends({ selectHandler, friends, addFriend }) {
+export default function Friends({
+  selectHandler,
+  friends,
+  addFriend,
+  setShow,
+  show,
+}) {
   const [isOpen, setIsOpen] = useState(false);
   const [img, setImg] = useState();
   const [name, setName] = useState("");
@@ -59,7 +65,14 @@ export default function Friends({ selectHandler, friends, addFriend }) {
                 </span>
               </li>
               <li>
-                <button onClick={() => selectHandler(friend.id)}>Select</button>
+                <button
+                  onClick={() => {
+                    selectHandler(friend.id);
+                    setIsOpen(!isOpen);
+                  }}
+                >
+                  Select
+                </button>
               </li>
             </ul>
           );
@@ -67,9 +80,16 @@ export default function Friends({ selectHandler, friends, addFriend }) {
       ) : (
         <h3 id="noDisplay">No friends to display.</h3>
       )}
-      <button id="add_Friend" onClick={() => setIsOpen(!isOpen)}>
+      <button
+        id="add_Friend"
+        onClick={() => {
+          if (show) setShow(!show);
+          setIsOpen(!isOpen);
+        }}
+      >
         Add Friend
       </button>
+
       {isOpen && (
         <div className="friend" id="addFriend">
           <img
