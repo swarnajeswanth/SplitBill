@@ -13,7 +13,7 @@ export default function Friends({ selectHandler, friends, addFriend }) {
     const fileUploaded = event.target.files[0];
     setImg(URL.createObjectURL(fileUploaded));
   }
-  const handleClick = (event) => {
+  const handleClick = () => {
     hiddenFileInput.current.click();
   };
 
